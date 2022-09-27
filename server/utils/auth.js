@@ -9,7 +9,7 @@ module.exports = {
 
     return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
   },
-  authMiddelware: function ({ req }) {
+  authMiddleware: function ({ req }) {
     let token = req.body.toke || req.query.token || req.headers.authorization;
 
     if (req.headers.authorization) {
